@@ -10,12 +10,14 @@ app.use(express.json());
 
 // --- Configuração do Banco de Dados ---
 const dbConfig = {
-    host: 'petwash',
-    user: 'root',
-    password: '',
-    database: 'petwash'
+    host: process.env.DB_HOST,       // Virá do Azure
+    user: process.env.DB_USER,       // Virá do Azure
+    password: process.env.DB_PASS,   // Virá do Azure
+    database: process.env.DB_NAME,   // Virá do Azure
+    ssl: {
+        rejectUnauthorized: true // Essencial para conexões seguras no Azure
+    }
 };
-
 // --- ROTA DE CADASTRO (ATUALIZADA) ---
 app.post('/usuarios', async (req, res) => {
     // 1. Recebe o 'porte_animal' junto com os outros dados
