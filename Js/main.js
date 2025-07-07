@@ -10,7 +10,7 @@ app.use(express.json());
 
 // --- Configuração do Banco de Dados ---
 const dbConfig = {
-    host: 'localhost',
+    host: 'petwash',
     user: 'root',
     password: '',
     database: 'petwash'
