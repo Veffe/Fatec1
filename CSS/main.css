@@ -1,0 +1,19 @@
+
+.titulo{
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ font-weight: bold;
+}
+.subt{
+    font-family: 'Arial Narrow', Arial, sans-serif;
+    font-size: small;
+    opacity: 50%;
+   }
+   .area{
+
+   margin-left: 20%;
+    width: fit-content;
+   }
+   .my-5{
+    max-width: max-content;
+    
+   }

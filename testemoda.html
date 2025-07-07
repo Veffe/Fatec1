@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Modal - Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="p-5">
+
+    <h1>Página de Teste do Modal</h1>
+    <p>Clique no botão abaixo para abrir o modal.</p>
+
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#meuModalDeTeste">
+        Abrir Modal de Teste
+    </button>
+
+    <div class="modal fade" id="meuModalDeTeste" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal de Teste</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Se você viu um alerta, o evento do Bootstrap funcionou!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        // Pega o elemento do modal pelo seu ID
+        const modalDeTeste = document.getElementById('meuModalDeTeste');
+
+        // Adiciona o "escutador" de eventos
+        modalDeTeste.addEventListener('show.bs.modal', function () {
+            // Se este alerta aparecer, o Bootstrap está funcionando 100%
+            alert('EVENTO DO BOOTSTRAP FUNCIONOU!');
+        });
+    </script>
+
+</body>
+</html>
