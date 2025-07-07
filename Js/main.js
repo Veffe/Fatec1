@@ -114,7 +114,7 @@ app.get('/servicos/:id', async (req, res) => {
 
 
 // --- INICIA O SERVIDOR ---
-const PORT = 3000;
+const PORT = process.env.PORT || 3000; // Usa a porta do Azure ou 3000 localmente
 app.listen(PORT, () => {
-    console.log(`🚀 Servidor rodando na porta http://localhost:${PORT}`);
+    console.log(`🚀 Servidor rodando na porta ${PORT}`);
 });
